@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Pulse | Emotional Wellness, Guided by AI</title>
+  <!-- Google Fonts + Font Awesome CDN -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Separate CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-wrapper">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <i class="fas fa-heartbeat pulse-icon"></i>
+      <span>Pulse</span>
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#features">Features</a>
+      <a href="#video-content">Stories</a>
+      <a href="#ai-companion">Companion</a>
+    </div>
+    <div class="nav-btn">
+      <button class="btn-outline-light">Get Early Access</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section: Emotional Storytelling & Soft UI -->
+  <header class="hero">
+    <div class="hero-text">
+      <span class="hero-badge">✨ AI-Powered Emotional Wellness</span>
+      <h1>Your mind, softly understood.<br> <span class="gradient-text">Pulse</span> listens.</h1>
+      <p>Mood tracking · Guided meditation · Emotional journaling · AI companion that truly cares. Breathe, reflect, and heal — all in one peaceful space.</p>
+      <div class="hero-cta">
+        <button class="btn-primary">Start your journey <i class="fas fa-arrow-right"></i></button>
+        <button class="btn-secondary" id="watchPromoBtn">🎬 Watch promo reel</button>
+      </div>
+      <div class="hero-stats">
+        <span><i class="fas fa-heart"></i> 10k+ calm minds</span>
+        <span><i class="fas fa-star"></i> 4.9 · emotional stories</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating-card mood-card">
+        <i class="fas fa-smile-wink"></i>
+        <span>How are you?</span>
+        <div class="mini-moods">
+          <span>😊</span><span>😌</span><span>😔</span><span>⚡</span>
+        </div>
+      </div>
+      <div class="floating-card ai-card">
+        <i class="fas fa-robot"></i>
+        <span>"I'm here for you"</span>
+        <div class="wave"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features Grid: Mood Tracking / Meditation / Journaling / AI companion showcase -->
+  <section id="features" class="features-section">
+    <div class="section-header">
+      <h2>designed for gentle evolution</h2>
+      <p>Every feature whispers calm — from your first breath to your deepest reflection</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Mood Tracking</h3>
+        <p>Log emotions with color & story. Discover patterns with soft analytics.</p>
+        <div class="feature-demo mood-demo" id="moodWidget">
+          <div class="mood-selector">
+            <span data-mood="bliss">😊 Bliss</span>
+            <span data-mood="calm">😌 Calm</span>
+            <span data-mood="anxious">🌀 Anxious</span>
+            <span data-mood="sad">💧 Sad</span>
+            <span data-mood="energetic">⚡ Energetic</span>
+          </div>
+          <p class="mood-feedback" id="moodFeedback">tap any mood → felt seen</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-spa"></i></div>
+        <h3>Guided Meditation</h3>
+        <p>Breathing anchors, body scans, and soundscapes.</p>
+        <div class="breathing-demo" id="breathingCircle">
+          <div class="circle-breath"></div>
+          <p class="breath-text">Breathe in</p>
+          <button class="breath-btn" id="startBreathBtn">Start 2-min calm <i class="fas fa-play"></i></button>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-feather-alt"></i></div>
+        <h3>Emotional Journaling</h3>
+        <p>Unfiltered words meet compassionate AI.</p>
+        <div class="journal-demo">
+          <textarea id="journalEntry" placeholder="What's on your mind today? Pulse listens without judgment..."></textarea>
+          <button id="saveJournalBtn" class="small-btn">save reflection <i class="fas fa-leaf"></i></button>
+          <div id="journalFeedback" class="journal-feedback"></div>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-brain"></i></div>
+        <h3>AI Companion • Aura</h3>
+        <p>Your empathy-powered friend, 24/7.</p>
+        <div class="mini-chat" id="aiChatInterface">
+          <div class="chat-messages" id="chatMessages">
+            <div class="message ai">✨ Hi, I'm Aura. How can I support you today?</div>
+          </div>
+          <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Share a feeling...">
+            <button id="sendChatBtn"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Content: Promo Reel, UI Walkthrough, Launch Teaser (Emotional Storytelling showcase) -->
+  <section id="video-content" class="video-showcase">
+    <div class="section-header">
+      <h2>emotional storytelling in motion</h2>
+      <p>Watch the journey — from inner quiet to vibrant connection. Meet Pulse through film.</p>
+    </div>
+    <div class="video-grid">
+      <div class="video-card" data-video-title="Emotional Promo Reel" data-video-desc="Feel the transformation: soft melodies and real stories.">
+        <div class="video-thumb">
+          <i class="fas fa-play-circle play-icon"></i>
+          <div class="thumb-bg promo-bg"></div>
+        </div>
+        <h4>Emotional Promo Reel</h4>
+        <p>1 min • heartfelt visuals</p>
+      </div>
+      <div class="video-card" data-video-title="UI Walkthrough: Guided Meditation" data-video-desc="Explore Pulse's serene interface — breathing, journaling, and mood universe.">
+        <div class="video-thumb">
+          <i class="fas fa-play-circle play-icon"></i>
+          <div class="thumb-bg walkthrough-bg"></div>
+        </div>
+        <h4>UI Walkthrough Video</h4>
+        <p>gentle product tour</p>
+      </div>
+      <div class="video-card" data-video-title="Pulse Launch Teaser" data-video-desc="Coming soon. Your sanctuary awaits.">
+        <div class="video-thumb">
+          <i class="fas fa-play-circle play-icon"></i>
+          <div class="thumb-bg teaser-bg"></div>
+        </div>
+        <h4>App Launch Teaser</h4>
+        <p>prelude to peace</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emotional Storytelling & Testimonials (soft storytelling) -->
+  <section class="storytelling">
+    <div class="story-container">
+      <div class="story-quote">
+        <i class="fas fa-quote-left"></i>
+        <p>"Pulse didn’t just track my moods — it taught me to hold them with kindness. The AI companion feels like a gentle friend."</p>
+        <h4>— Zara K. <span>anxiety warrior</span></h4>
+      </div>
+      <div class="story-visual">
+        <div class="pulse-ring"></div>
+        <div class="heart-rate">❤️ emotional storytelling blooms</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimal footer & product presentation -->
+  <footer class="soft-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <i class="fas fa-heartbeat"></i> Pulse · mental wellness, reimagined.
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Therapy resources</a>
+        <a href="#">Careers</a>
+      </div>
+      <div class="footer-copy">
+        © 2025 Pulse — soft presence for every emotion.
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Video Modal (for the three videos) -->
+<div id="videoModal" class="modal">
+  <div class="modal-content glass-modal">
+    <span class="close-modal">&times;</span>
+    <div class="modal-video-container">
+      <video id="modalVideoPlayer" controls autoplay muted loop playsinline>
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h3 id="modalVideoTitle">Emotional Promo Reel</h3>
+      <p id="modalVideoDesc">Calming story in bloom</p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
